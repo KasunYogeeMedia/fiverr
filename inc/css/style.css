@@ -1,3 +1,14 @@
+p,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Roboto', sans-serif;
+}
+
 .top_section {
     background-repeat: no-repeat;
     background-position: top;
@@ -63,6 +74,25 @@ table.icons.ms-auto {
     position: absolute;
     width: 100%;
     height: auto
+}
+
+.icon_section .icon_sm.anm img {
+    animation: rotation 2s infinite linear;
+}
+.icon_section .icon_md.anm img {
+    animation: rotation 10s infinite linear;
+}
+.icon_section .icon_lg.anm img {
+    animation: rotation 20s infinite linear;
+}
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(359deg);
+    }
 }
 
 .icon_section .icon_sm img {
@@ -157,6 +187,7 @@ table.icons.ms-auto {
     max-width: 30vw;
     left: 64vw;
     top: 29vw;
+    z-index: 2;
 }
 
 .back_imgs .heart {
@@ -171,12 +202,15 @@ table.icons.ms-auto {
     margin-top: -10vw;
     position: sticky;
     z-index: 9;
+    animation: shake 20s infinite linear;
 }
+@keyframes shake {
 
+}
 /* background section_1 */
 
 .parallax {
-    min-height: 600px;
+    min-height: 50vw;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -188,12 +222,57 @@ table.icons.ms-auto {
     background-image: url(../img/par_1.jpg);
 }
 
+.parallax_2 {
+    background-image: url(../img/par_2.jpg);
+}
+
+.parallax_3 {
+    background-image: url(../img/par_3.jpg);
+}
+
 /* content  */
+.caption {
+    margin-top: -45vw;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    padding: 0 5vw;
+    line-height: 4 vw;
+}
+
+.header {
+    padding-top: 10vw;
+}
+
+.header .gold {
+    color: #f3bd0c;
+    text-shadow: 2px 2px #bc8b19;
+    font-size: 4vw;
+    line-height: 5vw;
+}
+
+.caption_1 {
+    padding-top: 5vw;
+}
+
+.caption_2 {
+    padding-top: 10vw;
+}
+
+.caption span {
+    text-align: center;
+    color: #011351;
+    font-size: 2vw;
+    font-weight: bold;
+}
+
 .white_sec {
     width: 100%;
     height: auto;
     margin-top: -16vw;
 }
-.parallax_2 {
-    background-image: url(../img/par_2.jpg);
+
+/* Footer */
+.footer {
+    background-color: black;
 }
